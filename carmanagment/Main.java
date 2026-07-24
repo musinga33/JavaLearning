@@ -30,5 +30,12 @@ public class Main {
         Car2 car2 = new Car2("BYD U1", "White", 2021);
         car2.displayInfo();
 
+        ElectricCar tesla = new ElectricCar("Tesla", "White", 2026, 100);
+
+        tesla.displayElectricCarInfo();
+
+        tesla.start();
+
+        tesla.chargeBattery();
     }
 }
