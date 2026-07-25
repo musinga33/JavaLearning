@@ -3,27 +3,18 @@ package carmanagment;
 public class Main {
 
     public static void main(String[] args) {
-        ElectricCar car = new ElectricCar("BYD", "Blue", 2025, 90);
 
-        car.chargeBattery();
+        Vehicle vehicle1 = new Car2("Toyota", "Black", 2020);
 
-        Car2 car1 = new Car2("Toyota", "Black", 2020);
+        vehicle1.displayInfo();
 
-        car1.displayInfo();
+        vehicle1.start();
 
-        car1.start();
+        Vehicle vehicle2 = new ElectricCar("Tesla", "White", 2026, 100);
 
-        ElectricCar car2 = new ElectricCar("Tesla", "White", 2026, 100);
+        vehicle2.displayInfo();
 
-        car2.displayElectricCarInfo();
-
-        car2.start();
-
-        car2.chargeBattery();
-
-        Car2 car3 = new ElectricCar("BYD", "Blue", 2025, 90);
-
-        car3.start();
+        vehicle2.start();
 
     }
 
