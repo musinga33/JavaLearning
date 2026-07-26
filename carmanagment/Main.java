@@ -17,6 +17,10 @@ public class Main {
         tesla.stop();
 
         tesla.chargeBattery();
+        VehicleActions actions = new ElectricCar("Tesla", "White", 2026, 100);
+
+        actions.start();
+        actions.stop();
 
     }
 
