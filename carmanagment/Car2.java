@@ -1,6 +1,6 @@
 package carmanagment;
 
-public class Car2 extends Vehicle {
+public class Car2 extends Vehicle implements VehicleActions {
 
     public Car2(String brand, String color, int year) {
 
@@ -17,7 +17,14 @@ public class Car2 extends Vehicle {
     @Override
     public void start() {
 
-        System.out.println("Car is starting");
+        System.out.println("Car engine is starting");
+
+    }
+
+    @Override
+    public void stop() {
+
+        System.out.println("Car is stopping");
 
     }
 
