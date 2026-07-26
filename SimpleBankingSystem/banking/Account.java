@@ -25,9 +25,14 @@ public class Account {
 
     // Withdraw money
 
-    public void withdraw(double amount) {
+    public void withdraw(double amount) throws InsufficientBalanceException {
+        if (amount > balance) {
+            throw new InsufficientBalanceException(
+                    "Insufficient balance for withdrawal. Your current balance is: "
+                            + balance + " USD");
+        }
         balance = balance - amount;
-        System.out.println("Withdrew: " + amount + ", Successful, New Balance: ");
+        System.out.println("Withdrew: " + amount + ", Successful, New Balance: " + balance + " USD");
     }
 
     // Display account information

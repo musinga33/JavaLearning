@@ -24,6 +24,8 @@ public class Customer {
         System.out.println("Phone Number:" + phoneNumber);
 
         System.out.println("\nAccount Information:");
+
+        account.displayAccountInfo();
     }
 
     // getters
