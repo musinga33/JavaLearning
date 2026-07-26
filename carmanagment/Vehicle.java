@@ -2,7 +2,9 @@ package carmanagment;
 
 import java.time.Year;
 
-public class Vehicle {
+public abstract class Vehicle {
+
+    public abstract void start();
 
     private String brand;
     private String color;
@@ -84,9 +86,9 @@ public class Vehicle {
 
     }
 
-    public void start() {
+    // public void start() {
 
-        System.out.println("Vehicle is starting");
+    // System.out.println("Vehicle is starting");
 
-    }
+    // }
 }
