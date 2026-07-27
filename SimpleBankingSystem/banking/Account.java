@@ -64,6 +64,26 @@ public class Account {
         System.out.println("Balance: " + balance + " USD");
     }
 
+    public void displayTransactionHistory() {
+
+        System.out.println("\n========== Transaction History ==========");
+
+        if (transactions.isEmpty()) {
+
+            System.out.println("No transactions found.");
+
+            return;
+
+        }
+
+        for (Transaction transaction : transactions) {
+
+            transaction.displayTransaction();
+
+        }
+
+    }
+
     // Getters
     public String getAccountNumber() {
         return accountNumber;
@@ -76,4 +96,5 @@ public class Account {
     public double getBalance() {
         return balance;
     }
+
 }

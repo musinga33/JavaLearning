@@ -52,6 +52,7 @@ public class Main {
         }
 
         samuelAccount.displayAccountInfo();
+        samuelAccount.displayTransactionHistory();
 
     }
 
