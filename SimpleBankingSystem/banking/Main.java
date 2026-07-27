@@ -29,7 +29,7 @@ public class Main {
 
         try {
 
-            samuelAccount.deposit(-400);
+            samuelAccount.deposit(40000);
 
         } catch (InvalidAmountException e) {
 

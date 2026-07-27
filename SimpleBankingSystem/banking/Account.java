@@ -1,9 +1,12 @@
 package SimpleBankingSystem.banking;
 
+import java.util.ArrayList;
+
 public class Account {
     private String accountNumber;
     private String accountHolderName;
     private double balance;
+    private ArrayList<Transaction> transactions;
 
     // Constructor
 
@@ -12,6 +15,7 @@ public class Account {
         this.accountNumber = accountNumber;
         this.accountHolderName = accountHolderName;
         this.balance = balance;
+        this.transactions = new ArrayList<>();
 
     }
 
@@ -27,6 +31,7 @@ public class Account {
         }
 
         balance = balance + amount;
+        transactions.add(new Transaction("Deposit", amount));
 
         System.out.println("Deposit successful");
 
@@ -48,6 +53,7 @@ public class Account {
                             + balance + " USD");
         }
         balance = balance - amount;
+        transactions.add(new Transaction("Withdrawal", amount));
         System.out.println("Withdrew: " + amount + ", Successful, New Balance: " + balance + " USD");
     }
 
