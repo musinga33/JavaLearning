@@ -8,15 +8,15 @@ public class Main {
 
         Account samuelAccount = new Account(
                 "1001",
-                "Samuel",
-                50000);
+                "IRADUKUNDA Musinga Samuel",
+                1000);
 
         // Create a customer and give him the account
 
         Customer samuel = new Customer(
                 "C001",
-                "Samuel",
-                "0780000000",
+                "IRADUKUNDA Musinga Samuel",
+                "0786590801",
                 samuelAccount);
 
         // Display customer information
@@ -27,10 +27,17 @@ public class Main {
 
         System.out.println("\nAfter Deposit:");
 
-        samuelAccount.deposit(20000);
+        try {
+
+            samuelAccount.deposit(-400);
+
+        } catch (InvalidAmountException e) {
+
+            System.out.println(e.getMessage());
+
+        }
 
         samuelAccount.displayAccountInfo();
-
         // Withdraw money
 
         System.out.println("\nAfter Withdrawal:");
@@ -39,6 +46,8 @@ public class Main {
             samuelAccount.withdraw(10000);
 
         } catch (InsufficientBalanceException e) {
+            System.out.println(e.getMessage());
+        } catch (InvalidAmountException e) {
             System.out.println(e.getMessage());
         }
 

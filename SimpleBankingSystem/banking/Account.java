@@ -17,15 +17,32 @@ public class Account {
 
     // Deposit money
 
-    public void deposit(double amount) {
+    public void deposit(double amount) throws InvalidAmountException {
 
-        balance += amount;
-        System.out.println("Deposited: " + amount + ", Successful, New Balance: ");
+        if (amount <= 0) {
+
+            throw new InvalidAmountException(
+                    "Deposit amount must be greater than zero");
+
+        }
+
+        balance = balance + amount;
+
+        System.out.println("Deposit successful");
+
     }
 
     // Withdraw money
 
-    public void withdraw(double amount) throws InsufficientBalanceException {
+    public void withdraw(double amount) throws InsufficientBalanceException,
+            InvalidAmountException {
+        if (amount <= 0) {
+
+            throw new InvalidAmountException(
+                    "Withdrawal amount must be greater than zero");
+
+        }
+
         if (amount > balance) {
             throw new InsufficientBalanceException(
                     "Insufficient balance for withdrawal. Your current balance is: "
@@ -36,7 +53,6 @@ public class Account {
     }
 
     // Display account information
-
     public void displayAccountInfo() {
         System.out.println("Account Number: " + accountNumber);
         System.out.println("Account Holder Name: " + accountHolderName);
@@ -44,18 +60,15 @@ public class Account {
     }
 
     // Getters
-
     public String getAccountNumber() {
         return accountNumber;
     }
 
     public String getAccountHolderName() {
         return accountHolderName;
-
     }
 
     public double getBalance() {
         return balance;
     }
-
 }
