@@ -33,7 +33,6 @@ public class Account {
     }
 
     // Withdraw money
-
     public void withdraw(double amount) throws InsufficientBalanceException,
             InvalidAmountException {
         if (amount <= 0) {
