@@ -29,7 +29,7 @@ public class Main {
 
         try {
 
-            samuelAccount.deposit(40000);
+            samuelAccount.deposit(40000050);
 
         } catch (InvalidAmountException e) {
 
@@ -43,7 +43,7 @@ public class Main {
         System.out.println("\nAfter Withdrawal:");
 
         try {
-            samuelAccount.withdraw(10000);
+            samuelAccount.withdraw(999999000);
 
         } catch (InsufficientBalanceException e) {
             System.out.println(e.getMessage());
