@@ -3,7 +3,7 @@ package SimpleBankingSystem.banking;
 public class Main {
 
     public static void main(String[] args) {
-
+        Bank bank = new Bank("Musinga Bank");
         // Create an account
 
         Account samuelAccount = new Account(
@@ -18,42 +18,47 @@ public class Main {
                 "IRADUKUNDA Musinga Samuel",
                 "0786590801",
                 samuelAccount);
+        // Add Samuel to bak
+        bank.addCustomer(samuel);
 
+        // Display all customers
+        bank.displayAllCustomers();
         // Display customer information
 
-        samuel.displayCustomerInfo();
+        // samuel.displayCustomerInfo();
 
-        // Deposit money
+        // // Deposit money
 
-        System.out.println("\nAfter Deposit:");
+        // System.out.println("\nAfter Deposit:");
 
-        try {
+        // try {
 
-            samuelAccount.deposit(40000050);
+        // samuelAccount.deposit(40000050);
 
-        } catch (InvalidAmountException e) {
+        // } catch (InvalidAmountException e) {
 
-            System.out.println(e.getMessage());
+        // System.out.println(e.getMessage());
 
-        }
+        // }
 
-        samuelAccount.displayAccountInfo();
-        // Withdraw money
+        // samuelAccount.displayAccountInfo();
+        // // Withdraw money
 
-        System.out.println("\nAfter Withdrawal:");
+        // System.out.println("\nAfter Withdrawal:");
 
-        try {
-            samuelAccount.withdraw(999999000);
+        // try {
+        // samuelAccount.withdraw(999999000);
 
-        } catch (InsufficientBalanceException e) {
-            System.out.println(e.getMessage());
-        } catch (InvalidAmountException e) {
-            System.out.println(e.getMessage());
-        }
+        // } catch (InsufficientBalanceException e) {
+        // System.out.println(e.getMessage());
+        // } catch (InvalidAmountException e) {
+        // System.out.println(e.getMessage());
+        // }
 
-        samuelAccount.displayAccountInfo();
-        samuelAccount.displayTransactionHistory();
+        // samuelAccount.displayAccountInfo();
+        // samuelAccount.displayTransactionHistory();
 
+        //
     }
 
 }

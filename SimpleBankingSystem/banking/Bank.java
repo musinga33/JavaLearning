@@ -42,4 +42,5 @@ public class Bank {
     public ArrayList<Customer> getCustomers() {
         return customers;
     }
+    
 }
